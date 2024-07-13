@@ -19,7 +19,7 @@ export const AddStd = () => {
     const [religion,setReligion] = useState<string>();
     const [section,setSection] = useState<string>();
 
-    const addData = () => {
+    const addData = async() => {
         let obj = {
             firstName: firstName,
             lastName: lastName,
@@ -31,7 +31,7 @@ export const AddStd = () => {
             religion: religion,
             section: section
         }
-        sendData("students",obj);
+       await sendData("students",obj);
     }
 
 
@@ -102,25 +102,15 @@ export const AddStd = () => {
                    </Grid>
 
                    <Grid item xs={6}>
-                    <BAInput
-                        label="Course"
-                        variant="outlined"
-                        fullWidth
-                        onChange={(e:any) => setCourse(e.target.value)}
-                        required
-                    />
+                    <BASelect label={"Course"} val1={"Computer Science"} val2={"Biology"} val3={"Commerce"} val4={"Medical"}
+                     onChange={(e:any) => setCourse(e.target.value)}
+                     />
                    </Grid>
 
                    <Grid item xs={6}>
-                    <BAInput
-                        label="Class"
-                        variant="outlined"
-                        fullWidth
-                        onChange={(e:any) => setStdClass(e.target.value)}
-                        required
-                        name="class"
-
-                    />
+                   <BASelect label={"Class"} val1={"7"} val2={"8"} val3={"9"} val4={"10"}
+                     onChange={(e:any) => setStdClass(e.target.value)}
+                     />
                    </Grid>
 
                    <Grid item xs={6}>

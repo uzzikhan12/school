@@ -4,7 +4,7 @@ import { SimpleTreeView, TreeItem } from '@mui/x-tree-view';
 
 export default function TreeView(props:any) {
 
-  const {addstd, allstd, addteacher, allteacher, FeeStructure, FeeSubmission, AddSubject, SubjectList, classForm, examSchedule, examResult, admission} = props;
+  const {addstd, allstd, addteacher, allteacher, FeeStructure, FeeSubmission, AddSubject, SubjectList, classForm, examSchedule, examResult, admission, syllabusForm, syllabusList} = props;
 
   return <>
   <Box sx={{ minHeight: 352, minWidth: 250 }}>
@@ -35,8 +35,8 @@ export default function TreeView(props:any) {
       </TreeItem>
     
       <TreeItem itemId="Syllabus" label="Syllabus">
-        <TreeItem itemId="syllabus-community" label="Syllabus Form" />
-        <TreeItem itemId="syllabus-pro" label="Syllabus List" />
+        <TreeItem itemId="syllabus-community" label="Syllabus Form" onClick={syllabusForm}/>
+        <TreeItem itemId="syllabus-pro" label="Syllabus List"  onClick={syllabusList}/>
       </TreeItem>
     
       <TreeItem itemId="Class" label="Class">

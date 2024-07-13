@@ -147,6 +147,9 @@ export default function BADrawer() {
           examSchedule={()=>{Navigate("/examschedule")}}
           examResult={()=>{Navigate("/examresult")}}
 
+          syllabusList={()=>{Navigate("/syllabuslist")}}
+          syllabusForm={()=>{Navigate("/syllabusform")}}
+
           admission={()=>{Navigate("/admission")}}
         />
 

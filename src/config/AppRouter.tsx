@@ -12,6 +12,8 @@ import { ClassForm } from "../screens/ClassForm";
 import { ExamSchedule } from "../screens/ExamSchedule";
 import { ExamResult } from "../screens/ExamResult";
 import { Admission } from "../screens/Admission";
+import { SyllabusForm } from "../screens/SyllasbusFrom";
+import { SyllabusList } from "../screens/SyllabusList";
 
 export const AppRouter = () => {
     return <>
@@ -30,6 +32,8 @@ export const AppRouter = () => {
                 <Route path="examschedule" element={<ExamSchedule />}/>
                 <Route path="examresult" element={<ExamResult />}/>
                 <Route path="admission" element={<Admission />}/>
+                <Route path="syllabusform" element={<SyllabusForm />}/>
+                <Route path="syllabuslist" element={<SyllabusList />}/>
             </Routes>
         </BrowserRouter>
     </>

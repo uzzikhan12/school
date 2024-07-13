@@ -2,8 +2,27 @@ import { Box, Container, Grid, Typography } from "@mui/material"
 import { BAInput } from "../components/BAInput"
 import BADrawer from "../components/BADrawer"
 import BAButton from "../components/BAButton"
+import { useState } from "react"
+import { sendData } from "../config/firebaseMethod"
 
-export const FeeSubmissionForm = () => {
+export const FeeSubmissionForm = () => 
+    {
+        const [stdName,setStdName] = useState<string>()
+        const [stdID,setStdID] = useState<string>()
+        const [tutionFee,setTutionFee] = useState<string>()
+        const [registrationFee,setRegistrationFee] = useState<string>()
+        const [labCharges,setLabCharges] = useState<string>()
+
+        const addData = async() => {
+            let obj = {
+                stdName:stdName,
+                stdID:stdID,
+                tutionFee:tutionFee,
+                registrationFee:registrationFee,
+                labCharges:labCharges
+            }
+            sendData("feeSubmission",obj);
+        }
     return<>
         <BADrawer />
         <Box>
@@ -20,6 +39,7 @@ export const FeeSubmissionForm = () => {
                             type="text"
                             required={true}
                             fullWidth={true}
+                            onChange={(e:any)=>setStdName(e.target.value)}
                         />
                     </Grid>
                         
@@ -29,6 +49,7 @@ export const FeeSubmissionForm = () => {
                           type="text"
                           required={true}
                           fullWidth={true}
+                          onChange={(e:any)=>setStdID(e.target.value)}
                         />
                     </Grid>
                     
@@ -38,6 +59,7 @@ export const FeeSubmissionForm = () => {
                           type="number"
                           required={true}
                           fullWidth={true}
+                          onChange={(e:any)=>setTutionFee(e.target.value)}
                         />
                     </Grid>
                     
@@ -47,6 +69,7 @@ export const FeeSubmissionForm = () => {
                           type="number"
                           required={true}
                           fullWidth={true}
+                          onChange={(e:any)=>setRegistrationFee(e.target.value)}
                         />
                     </Grid>
                     
@@ -55,11 +78,12 @@ export const FeeSubmissionForm = () => {
                           label="Lab charges"
                           type="number"
                           fullWidth={true}
+                          onChange={(e:any)=>setLabCharges(e.target.value)}
                         />
                     </Grid>
 
                     <Grid item xs={12} className="text-center">
-                        <BAButton variant="contained" color="primary" label="Submit"/>
+                        <BAButton variant="contained" color="primary" label="Submit" onClick={addData}/>
                     </Grid>
 
                 </Grid>
