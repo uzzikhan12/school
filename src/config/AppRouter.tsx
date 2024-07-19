@@ -14,12 +14,14 @@ import { ExamResult } from "../screens/ExamResult";
 import { Admission } from "../screens/Admission";
 import { SyllabusForm } from "../screens/SyllasbusFrom";
 import { SyllabusList } from "../screens/SyllabusList";
+import { Login } from "../pages/Login";
+import { SignUp } from "../pages/Signup";
 
 export const AppRouter = () => {
     return <>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Dashboard />}/>
+                <Route path="home" element={<Dashboard />}/>
                 <Route path="AddStd" element={<AddStd />}/>
                 <Route path="allstudent" element={<AllStd />}/>
                 <Route path="addteacher" element={<AddTeacher />}/>
@@ -34,6 +36,8 @@ export const AppRouter = () => {
                 <Route path="admission" element={<Admission />}/>
                 <Route path="syllabusform" element={<SyllabusForm />}/>
                 <Route path="syllabuslist" element={<SyllabusList />}/>
+                <Route path="/" element={<Login />}/>
+                <Route path="signup" element={<SignUp />}/>
             </Routes>
         </BrowserRouter>
     </>

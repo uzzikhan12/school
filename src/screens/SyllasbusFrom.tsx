@@ -32,12 +32,12 @@ export const SyllabusForm = () =>
                 
             <Grid container spacing={3}>
                 <Grid className="m-auto" item xs={12}>
-                    <BASelect label={"Class"}val1={"5"} val2={"6"} val3={"7"} val4={"8"} val5={"9"} val6={"10"}
+                    <BASelect label={"Class"} values={["5","6","7","8","9","10"]}
                      onChange={(e:any) => setStdClass(e.target.value)}
                      />
                 </Grid>
                 <Grid className="m-auto" item xs={12}>
-                    <BASelect label={"Subject"} val1={"Math"} val2={"English"} val3={"Computer"} val4={"Science"} val5={"Physics"} val6={"Chemistry"}
+                    <BASelect label={"Subject"} values={["Math","English","Chemistry","Science","Computer","Physics"]}
                      onChange={(e:any) => setSubject(e.target.value)}
                      />
                 </Grid>

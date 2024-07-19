@@ -12,6 +12,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TreeView from '../components/TreeView';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const drawerWidth = 240;
 
@@ -63,11 +64,9 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-
-
 export default function BADrawer() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const Navigate = useNavigate();
 
   const handleDrawerOpen = () => {
@@ -95,14 +94,10 @@ export default function BADrawer() {
 
           <Box className="d-flex justify-content-between w-100">
 
-            <Typography variant="h6" noWrap component="div">
+            <Typography variant="h6" noWrap component="div" onClick={()=>{Navigate("/home")}}>
               School App
             </Typography>
 
-            <Typography variant="h6" noWrap component="div">
-              
-            </Typography>
-          
           </Box>
 
         </Toolbar>

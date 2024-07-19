@@ -33,7 +33,6 @@ export const AllStd = () => {
                   <th className="p-3 fs-5 border">Name</th>
                   <th className="p-3 fs-5 border">Last Name</th>
                   <th className="p-3 fs-5 border">Class</th>
-                  <th className="p-3 fs-5 border">Course</th>
                   <th className="p-3 fs-5 border">Section</th>
                 </tr>
                 </thead>
@@ -43,7 +42,6 @@ export const AllStd = () => {
                     <td className="p-3 border">{student.firstName}</td>
                     <td className="p-2 border">{student.lastName}</td>
                     <td className="p-2 border">{student.stdClass}</td>
-                    <td className="p-2 border">{student.course}</td>
                     <td className="p-2 border">{student.section}</td>
                   </tr>
                 </tbody>

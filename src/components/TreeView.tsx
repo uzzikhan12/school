@@ -20,7 +20,6 @@ export default function TreeView(props:any) {
       <TreeItem itemId="fees" label="Fees">
         <TreeItem itemId="fees-community" label="Fees Structure" onClick={FeeStructure} />
         <TreeItem itemId="fees-pro" label="Fees Submission" onClick={FeeSubmission}/>
-        <TreeItem itemId="fees-premium" label="Fees Voucher" />
       </TreeItem>
     
       <TreeItem itemId="Teacher" label="Teacher">

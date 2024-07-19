@@ -14,7 +14,6 @@ export const AddStd = () => {
     const [email,setEmail] = useState<any>();
     const [age,setAge] = useState<number>();
     const [dateOfBirth,setDateOfBirth] = useState<number>();
-    const [course,setCourse] = useState<string>();
     const [stdClass,setStdClass] = useState<string>();
     const [religion,setReligion] = useState<string>();
     const [section,setSection] = useState<string>();
@@ -26,7 +25,6 @@ export const AddStd = () => {
             email: email,
             age: age,
             dateOfBirth: dateOfBirth,
-            course: course,
             stdClass: stdClass,
             religion: religion,
             section: section
@@ -80,17 +78,6 @@ export const AddStd = () => {
                    </Grid>
 
                    <Grid item xs={12}>
-                    <BAInput
-                        label="Age"
-                        variant="outlined"
-                        fullWidth
-                        onChange={(e:any) => setAge(e.target.value)}
-                        required
-                        type="number"
-                    />
-                   </Grid>
-
-                   <Grid item xs={12}>
                     <label className="m-1">Date of Birth</label>
                     <BAInput
                         variant="outlined"
@@ -102,13 +89,19 @@ export const AddStd = () => {
                    </Grid>
 
                    <Grid item xs={6}>
-                    <BASelect label={"Course"} val1={"Computer Science"} val2={"Biology"} val3={"Commerce"} val4={"Medical"}
-                     onChange={(e:any) => setCourse(e.target.value)}
-                     />
+                    <BAInput
+                        label="Age"
+                        variant="outlined"
+                        fullWidth
+                        onChange={(e:any) => setAge(e.target.value)}
+                        required
+                        type="number"
+                    />
                    </Grid>
 
+
                    <Grid item xs={6}>
-                   <BASelect label={"Class"} val1={"7"} val2={"8"} val3={"9"} val4={"10"}
+                   <BASelect label={"Class"} values={['5', '6', '7', '8', '9', '10']}
                      onChange={(e:any) => setStdClass(e.target.value)}
                      />
                    </Grid>
@@ -124,7 +117,7 @@ export const AddStd = () => {
                    </Grid>
 
                    <Grid item xs={6}>
-                    <BASelect label={"Section"} val1={"A"} val2={"B"} val3={"C"} val4={"D"}
+                    <BASelect label={"Section"} values={["A","B","C","D"]}
                      onChange={(e:any) => setSection(e.target.value)}
                      />
                    </Grid>

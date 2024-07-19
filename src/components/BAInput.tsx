@@ -3,7 +3,7 @@ import { TextField } from '@mui/material';
 export const BAInput = (props:any) => 
 {
     
-  const { label, variant , value , onChange , rows} = props;
+  const { label, variant , value , onChange , rows, type} = props;
   
     return <>
             <TextField
@@ -15,6 +15,8 @@ export const BAInput = (props:any) =>
               required
               rows={rows}
               multiline
+              type={type}
+              className='bg-white rounded'
             />
     
     </>

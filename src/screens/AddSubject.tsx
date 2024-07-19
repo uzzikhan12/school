@@ -39,8 +39,8 @@ export const AddSubject = () =>
                 
             <Grid container spacing={3}>
                 <Grid className="m-auto" item xs={12}>
-                    <BASelect label={"Class"} val1={"7"} val2={"8"} val3={"9"} val4={"10"}
-                     onChange={(e:any) => setStdClass(e.target.value)}
+                    <BASelect label={"Class"} values={["5","6","7","8","9","10"]}
+                     onChange={(e:any) => {setStdClass(e.target.value)}}
                      />
                 </Grid>
                 
