@@ -93,11 +93,9 @@ export default function BADrawer() {
           </IconButton>
 
           <Box className="d-flex justify-content-between w-100">
-
-            <Typography variant="h6" noWrap component="div" onClick={()=>{Navigate("/home")}}>
+            <Typography variant="h6" noWrap component="div" sx={{ cursor: 'pointer'}} onClick={()=>{Navigate("/home")}}>
               School App
             </Typography>
-
           </Box>
 
         </Toolbar>
