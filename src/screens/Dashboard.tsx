@@ -26,10 +26,10 @@ export const Dashboard = () => {
     <Box>
       <Container maxWidth="md" className="mt-3">
         <Grid container spacing={3}>
-          <Grid item xs={4}>
+          <Grid item xs={6} sm={6} md={5}>
             <BACard main={"Total Student"} total={loading ? "Loading..." : allData.length.toString()} className="shadow" sx={{backgroundColor:"#1976d2"}} onClick={()=>navigate("/allstudent")}/>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={6} sm={6} md={5}>
             <BACard main={"Total Taecher"} total={loading ? "Loading" : allTeacherData.length.toString()} className="shadow" sx={{backgroundColor:"#26a69a"}} onClick={()=>navigate("/teacherlist")}/>
           </Grid>
         </Grid>

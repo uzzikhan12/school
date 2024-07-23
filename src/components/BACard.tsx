@@ -23,7 +23,7 @@ export const BACard = (props:any) =>
     const {main , total, className, sx, onClick} = props    
 
     return <>    
-    <Card className={className} sx={{ minWidth: 250 }}>
+    <Card className={className}>
       <CardContent className='py-3 w-100' sx={sx}>
         <Typography className='fs-3 text-center text-white' sx={{ mb: 1.5 }}>
           {main}
